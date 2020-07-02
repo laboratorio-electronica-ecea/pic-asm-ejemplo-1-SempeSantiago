@@ -1,6 +1,6 @@
 ;*******************************************************************************
 ;    Nombre del archivo - main.asm                                             *
-;    Autor:  Santiago Sempé                                                                   *
+;    Autor: Santiago Sempé                                                                   *
 ;    Descripción:                                                              *
 ;        Este es un programa ejemplo que define los bits de configuración y    *
 ;        utiliza variables.                                                    *
