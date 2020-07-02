@@ -1,0 +1,13 @@
+# Build files
+build/
+debug/
+dist/
+
+# IDE Private Files
+nbproject/private
+nbproject/Makefile-*
+nbproject/Package-*
+
+# Proteus Backup Files
+*.workspace
+*.pdsbak
