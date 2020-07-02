@@ -18,7 +18,10 @@
 
 ; Definición de variables ******************************************************
 ; Típicamente se elije 0x20 ya que es la primera dirección disponible de GPRs.
-        cblock  0x20                   ; Dirección de almacenamiento de datos
+        cblock  0x20			; Dirección de almacenamiento de datos
+	variable1
+	variable2
+	variable3
         endc
 	
 ;*******************************************************************************
@@ -35,18 +38,18 @@
 ; funcionamiento normal, conocida como super loop o main loop.
 main    bcf     STATUS,RP0
         bcf     STATUS,RP1              ; Paso al banco 0
-        movlw   0x05
-        movwf   0x20
-        addlw   0x03
-        movwf   0x21
+        movlw   d'5'
+        movwf   variable1
+        addlw   d'3'
+        movwf   variable2
         bsf     STATUS,RP0              ; Paso al banco 1
-        movlw   0x02
-        movwf   0x20
-        addlw   0x04
-        movwf   0x21
+        movlw   d'2'
+        movwf   variable1
+        addlw   d'4'
+        movwf   variable2
         bsf     STATUS,RP1              ; Paso al banco 3
-        movlw   0x01
-        movwf   0x22
+        movlw   d'1'
+        movwf   variable3
 
 main_loop
         goto    main_loop               ; Super loop
